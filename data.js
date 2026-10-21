@@ -19,6 +19,7 @@
 
 const UNIT_NAME = "פיקוח תל אביב";
 const DRIVE_SOP = "https://drive.google.com/drive/folders/1P1a89eoYBKih68KHxPH0D3_RtHccrFcu";
+const TRAINING_SITE = "https://sites.google.com/view/accntraining/";
 
 /* ---------- קטעים שחוזרים בהרבה רשימות ---------- */
 const INFO_FIELD = "שאב מידע על השדה: מסלול בשימוש ונתוניו, עזרי ניווט, תדר, מז\"א וכו'";
@@ -666,8 +667,20 @@ const HANDOVER = {
 /* =====================================================================
    מסך הבית
    ===================================================================== */
+/* ---------- טכני (עדיין ללא תוכן) ---------- */
+const TECH = {
+  type: "menu", id: "tech", title: "טכני", sub: "תקלות מערכות ונהלים טכניים", icon: "🛠️", color: "teal",
+  intro: ["בקרוב – עדיין אין תוכן בעמוד זה."],
+  items: [
+    // דוגמה לפריט עתידי:
+    // { type: "cl", id: "tech-atmas", title: "תקלת ATMAS", items: ["...", "..."] },
+    // { type: "link", title: "נוהל טכני בדרייב", url: "https://drive.google.com/..." },
+  ]
+};
+
 const HOME = [
   { type: "link", title: "סע\"מ", sub: "ספר עזר מבצעי – פיקוח תל אביב (Google Drive)", icon: "📘", color: "accent", wide: true, url: DRIVE_SOP },
+  { type: "link", title: "אתר הדרכה", sub: "בקרה צפון – אתר ההדרכה", icon: "🎓", color: "purple", wide: true, url: TRAINING_SITE },
   EMERGENCY,
   HANDOVER,
   SECTORS,
@@ -675,5 +688,6 @@ const HOME = [
   VDU,
   ARRIVAL,
   USEFUL,
+  TECH,
   PHONES
 ];
